@@ -1,4 +1,4 @@
-package Latihan.rumahsakit.dokter;
+package dokter.dokter;
 
 import java.util.*;
 
