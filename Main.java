@@ -1,4 +1,4 @@
-package Latihan.rumahsakit;
+package dokter;
 
 import java.util.Scanner;
 import Latihan.rumahsakit.dokter.Dokter;
