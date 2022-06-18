@@ -1,4 +1,4 @@
-package dokter.dokter;
+package Latihan.rumahsakit.dokter;
 
 import java.util.*;
 
@@ -7,7 +7,7 @@ interface RumahSkt {
     void rawatJalan();
 }
 
-abstract class AtributDokter implements RumahSkt {
+abstract class Atributtdokter implements RumahSkt {
     private String name, alamat, ruangan = "", namaDr = "", jnskel;
     private int dokter, kamar, lama, pilihDr, uang;
     private int hrgKamar = 0, jasaDr = 0, totalObat = 0, tindakan, totalBiaya = 0, umur, rm;
@@ -17,18 +17,18 @@ abstract class AtributDokter implements RumahSkt {
     public void rawatInap() {
 
         System.out.print("nama : ");
-        name = input.nextLine();
+        this.name = input.nextLine();
         System.out.print("alamat : ");
-        alamat = input.nextLine();
+        this.alamat = input.nextLine();
         System.out.print("jenis kelamin : ");
-        jnskel = input.nextLine();
+        this.jnskel = input.nextLine();
         System.out.print("Lama menginap : ");
-        lama = input.nextInt();
+        this.lama = input.nextInt();
 
         System.out.print("umur anda : ");
-        umur = input.nextInt();
+        this.umur = input.nextInt();
         System.out.print("no. rekam medis : ");
-        rm = input.nextInt();
+        this.rm = input.nextInt();
 
         System.out.println("pilih jenis kamar");
         System.out.print("1. kelas I\n");
@@ -39,31 +39,31 @@ abstract class AtributDokter implements RumahSkt {
         System.out.print("pilihan anda [ 1/2/3/4/5]: ");
 
         while (true) {
-            kamar = input.nextInt();
-            if (kamar == 1) {
+            this.kamar = input.nextInt();
+            if (this.kamar == 1) {
                 ruangan = "kelas I";
                 System.out.println("------" + ruangan + "------");
                 hrgKamar = 850000;
                 break;
-            } else if (kamar == 2) {
+            } else if (this.kamar == 2) {
                 ruangan = "kelas II";
                 System.out.println("------" + ruangan + "------");
-                hrgKamar = 1000000;
+                this.hrgKamar = 1000000;
                 break;
-            } else if (kamar == 3) {
-                ruangan = "kelas III";
+            } else if (this.kamar == 3) {
+                this.ruangan = "kelas III";
                 System.out.println("------" + ruangan + "------");
-                hrgKamar = 1300000;
+                this.hrgKamar = 1300000;
                 break;
-            } else if (kamar == 4) {
-                ruangan = "kelas VIP";
+            } else if (this.kamar == 4) {
+                this.ruangan = "kelas VIP";
                 System.out.println("------" + ruangan + "------");
-                hrgKamar = 1800000;
+                this.hrgKamar = 1800000;
                 break;
-            } else if (kamar == 5) {
-                ruangan = "kelas VVIP";
+            } else if (this.kamar == 5) {
+                this.ruangan = "kelas VVIP";
                 System.out.println("------" + ruangan + "------");
-                hrgKamar = 2450000;
+                this.hrgKamar = 2450000;
                 break;
             } else {
                 System.out.println("pilihan tidak tersedia");
@@ -73,95 +73,84 @@ abstract class AtributDokter implements RumahSkt {
 
         System.out.println("=========================================================");
 
-        System.out.println("pilih jenis dokter");
-        System.out.print("1. Dokter anak : Dr. Azizul hakim\n");
-        System.out.print("2. Dokter Penyakit dalam : Dr. Melanie Tan\n");
-        System.out.print("3. Dokter Mata : Dr. Riyon\n");
-        System.out.print("4. Dokter Umum : Dr. Hendra\n");
-        System.out.print("5. Dokter Bedah Umum : Dr. Taufiq\n");
+        System.out.println("pilih jenis this.dokter");
+        System.out.print("1. dokter anak : Dr. Azizul hakim\n");
+        System.out.print("2. dokter Penyakit dalam : Dr. Melanie Tan\n");
+        System.out.print("3. dokter Mata : Dr. Riyon\n");
+        System.out.print("4. dokter Umum : Dr. Hendra\n");
+        System.out.print("5. dokter Bedah Umum : Dr. Taufiq\n");
         System.out.print("pilihan anda [ 1/2/3/4/5]: ");
 
         while (true) {
-            dokter = input.nextInt();
-            if (dokter == 1) {
-                namaDr = "Dr. Azizul hakim";
-                jasaDr = 145000;
+            this.dokter = input.nextInt();
+            if (this.dokter == 1) {
+                this.namaDr = "Dr. Azizul hakim";
+                this.jasaDr = 145000;
                 break;
-            } else if (dokter == 2) {
-                namaDr = "Dr. Melanie Tan";
-                jasaDr = 200000;
+            } else if (this.dokter == 2) {
+                this.namaDr = "Dr. Melanie Tan";
+                this.jasaDr = 200000;
                 break;
-            } else if (dokter == 3) {
-                namaDr = "Dr. Riyon";
-                jasaDr = 170000;
+            } else if (this.dokter == 3) {
+                this.namaDr = "Dr. Riyon";
+                this.jasaDr = 170000;
                 break;
-            } else if (dokter == 4) {
-                namaDr = "Dr. Hendra";
-                jasaDr = 150000;
+            } else if (this.dokter == 4) {
+                this.namaDr = "Dr. Hendra";
+                this.jasaDr = 150000;
                 break;
-            } else if (dokter == 5) {
-                namaDr = "Dr. Taufiq";
-                jasaDr = 150000;
+            } else if (this.dokter == 5) {
+                this.namaDr = "Dr. Taufiq";
+                this.jasaDr = 150000;
                 break;
             } else {
                 System.out.println("pilihan tidak tersedia");
                 System.out.print("pilih jenis dokter : ");
             }
-        }
+        };
 
         System.out.println("=========================================================\n");
 
-        System.out.println("nama: " + name);
-        System.out.println("no. rekam medis: " + rm);
-        System.out.println("alamat: " + alamat);
-        System.out.println("jenis kelamin: " + jnskel);
-        System.out.println("umur : " + umur);
-        System.out.println("jenis kamar: " + ruangan);
-        System.out.println("Dokter Tujuan: " + namaDr);
-
-        System.out.println("=========================================================");
-
         System.out.println(" TOTAL YANG HARUS DIBAYAR ");
-        System.out.println("Atas nama : " + namaDr);
-        System.out.println("Jasa dokter : Rp." + jasaDr);
-        System.out.println("kamar inap : " + ruangan + " Rp." + hrgKamar);
-        System.out.println("Lama menginap : " + lama + " hari");
-        System.out.println("harga kamar : Rp." + hrgKamar * lama);
+        System.out.println("Atas nama : " + this.namaDr);
+        System.out.println("Jasa dokter : Rp." + this.jasaDr);
+        System.out.println("kamar inap : " + this.ruangan + " Rp." + this.hrgKamar);
+        System.out.println("Lama menginap : " + this.lama + " hari");
+        System.out.println("harga kamar : Rp." + this.hrgKamar * this.lama);
         System.out.print("total obat : Rp.");
-        totalObat = input.nextInt();
+        this.totalObat = input.nextInt();
 
         System.out.print("Tindakan : Rp.");
-        tindakan = input.nextInt();
+        this.tindakan = input.nextInt();
 
-        totalBiaya = (jasaDr + (hrgKamar * lama) + totalObat + tindakan);
-        System.out.println("total biaya: Rp." + totalBiaya);
+        this.totalBiaya = (this.jasaDr + (this.hrgKamar * this.lama) + this.totalObat + this.tindakan);
+        System.out.println("total biaya: Rp." + this.totalBiaya);
         while(true){
             System.out.print("masukan uang anda : Rp.");
-            uang = input.nextInt();
-            if (uang < totalBiaya) {
+            this.uang = input.nextInt();
+            if (this.uang < this.totalBiaya) {
                 System.out.println("uang anda kurang");
             } else {
-                System.out.println("kembalian : Rp." + (uang - totalBiaya));
+                System.out.println("kembalian : Rp." + (this.uang - this.totalBiaya));
                 break;
             }
         }
-        
     }
 
     @Override
     public void rawatJalan() {
 
         System.out.print("nama : ");
-        String name = input.nextLine();
+        this.name = input.nextLine();
         System.out.print("alamat : ");
-        alamat = input.nextLine();
+        this.alamat = input.nextLine();
         System.out.print("jenis kelamin : ");
-        jnskel = input.nextLine();
+        this.jnskel = input.nextLine();
 
         System.out.print("umur anda : ");
-        umur = input.nextInt();
+        this.umur = input.nextInt();
         System.out.print("no. rekam medis : ");
-        rm = input.nextInt();
+        this.rm = input.nextInt();
 
         System.out.println("=========================================================");
 
@@ -175,26 +164,26 @@ abstract class AtributDokter implements RumahSkt {
         System.out.print("pilihan anda [ 1/2/3/4/5]: ");
 
         while (true) {
-            pilihDr = input.nextInt();
-            if (pilihDr == 1) {
-                namaDr = "Dr. Ryu Hasan";
-                jasaDr = 150000;
+            this.pilihDr = input.nextInt();
+            if (this.pilihDr == 1) {
+                this.namaDr = "Dr. Ryu Hasan";
+                this.jasaDr = 150000;
                 break;
-            } else if (pilihDr == 2) {
-                namaDr = "Dr. Daniel";
-                jasaDr = 200000;
+            } else if (this.pilihDr == 2) {
+                this.namaDr = "Dr. Daniel";
+                this.jasaDr = 200000;
                 break;
-            } else if (pilihDr == 3) {
-                namaDr = "Dr. Andi suherman";
-                jasaDr = 150000;
+            } else if (this.pilihDr == 3) {
+                this.namaDr = "Dr. Andi suherman";
+                this.jasaDr = 150000;
                 break;
-            } else if (pilihDr == 4) {
-                namaDr = "Dr. Nainggolan";
-                jasaDr = 175000;
+            } else if (this.pilihDr == 4) {
+                this.namaDr = "Dr. Nainggolan";
+                this.jasaDr = 175000;
                 break;
-            } else if (pilihDr == 5) {
-                namaDr = "Dr. Zaid assalafi";
-                jasaDr = 150000;
+            } else if (this.pilihDr == 5) {
+                this.namaDr = "Dr. Zaid assalafi";
+                this.jasaDr = 150000;
                 break;
             } else {
                 System.out.println("pilihan tidak tersedia");
@@ -202,37 +191,31 @@ abstract class AtributDokter implements RumahSkt {
             }
         }
 
-        System.out.println("nama pasien : " + name);
-        System.out.println("alamat pasien: " + alamat);
-        System.out.println("jenis kelamin : " + jnskel);
-        System.out.println("umur : " + umur);
-        System.out.println("Atas Tujuan dokter : " + namaDr);
-
         System.out.println("=========================================================");
         System.out.println(" TOTAL YANG HARUS DIBAYAR ");
-        System.out.println("nama pasien : " + name);
-        System.out.println("no. rekam medis : " + rm);
-        System.out.println("Atas nama : " + namaDr);
-        System.out.println("Jasa dokter : Rp." + jasaDr);
+        System.out.println("nama pasien : " + this.name);
+        System.out.println("no. rekam medis : " + this.rm);
+        System.out.println("Atas nama : " + this.namaDr);
+        System.out.println("Jasa dokter : Rp." + this.jasaDr);
         System.out.print("total obat : Rp.");
-        totalObat = input.nextInt();
+        this.totalObat = input.nextInt();
         System.out.print("Tindakan : Rp.");
-        tindakan = input.nextInt();
+        this.tindakan = input.nextInt();
 
-        totalBiaya = (jasaDr + totalObat + tindakan);
-        System.out.println("total biaya: Rp." + totalBiaya);
+        this.totalBiaya = (this.jasaDr + this.totalObat + this.tindakan);
+        System.out.println("total biaya: Rp." + this.totalBiaya);
         while (true) {
             System.out.print("masukan uang anda : Rp.");
-            uang = input.nextInt();
-            if (uang < totalBiaya) {
+            this.uang = input.nextInt();
+            if (this.uang < this.totalBiaya) {
                 System.out.println("uang anda kurang");
             } else {
-                System.out.println("kembalian : Rp." + (uang - totalBiaya));
+                System.out.println("kembalian : Rp." + (this.uang - this.totalBiaya));
                 break;
             }
         }
     }
 }
 
-public class Dokter extends AtributDokter {    
+public class Dokter extends Atributtdokter {
 }
