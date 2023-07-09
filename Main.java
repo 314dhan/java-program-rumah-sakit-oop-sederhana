@@ -1,7 +1,7 @@
 package dokter;
 
 import java.util.Scanner;
-import Latihan.rumahsakit.dokter.Dokter;
+import dokter.dokter.Dokter;
 
 public class Main{
     public static void main(String[] args) {

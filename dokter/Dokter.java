@@ -1,4 +1,4 @@
 package dokter.dokter;
 
-public class Dok extends  {
+public class Dokter extends AtributDokter {
 }
